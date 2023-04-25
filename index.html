@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de música</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/cjy1irw.css">
+    <style>
+        .navbar-nav .nav-link.active {
+            color:#fff;
+            background-color: #960000;
+        }
+        .nav-link {
+            text-align: center;
+        }
+
+        body {
+            background-color:#a5a5a5 ;
+            height: 100vh;
+        }
+
+        #cabecalho {
+            background-color: #6d6d6d;
+            top: 0;
+            left: 0;
+        }
+        
+        * {
+            font-family: "grenadine-mvb", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+        
+        .container a {
+            list-style: none;
+            color: #fff;
+        }
+
+        .container h2 {
+            margin-top: 10px;
+            color: #960000;
+        }
+
+        .card {
+            margin: 20px;
+            background-color: #6d6d6d;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1> SITE DE MÚSICAS</h1>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="nav navbar-nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#tituloBandas">Bandas/ Cantores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tituloMusicas">Músicas</a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" class="container">
+        <section id="tituloBandas">
+            <h2>Cantores/Bandas</h2>
+                <div id ="carouselBandas" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div data-bs-interval="3000" class="carousel-item active">
+                            <img class="d-block w-100" src="./lib/VanceJoy.jpg">
+                            <div class="carousel-caption">
+                                <a href="#vancejoy">Vance Joy</a>
+                            </div>
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="./lib/Beatles.jpg">
+                            <div class="carousel-caption">
+                                <a href="#beatles">Beatles</a>
+                            </div>
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="./lib/Radiohead.jpg">
+                            <div class="carousel-caption">
+                                <a href="#radiohead">Radiohead</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-bs-target="#carouselBandas" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button data-bs-target="#carouselBandas" data-bs-slide="next" class="carousel-control-next" type="button">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselBandas" class="active" data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#carouselBandas" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselBandas" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+        </section>
+        <section id="tituloMusicas">
+            <h2> Músicas</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 id="radiohead">Radiohead</h3>
+                            </div>
+                            <img src="./lib/creep.gif">
+                            <div class="card-body">
+                                <h4 class="card-title">Creep</h4>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 id="beatles">Beatles</h3>
+                            </div>
+                            <img src="./lib/she loves you.gif">
+                            <div class="card-body">
+                                <h4 class="card-title">She loves you</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 id="vancejoy">Vance joy</h3>
+                            </div>
+                            <img src="./lib/riptide.gif">
+                            <div class="card-body">
+                            <h4 class="card-title">Riptide</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section> 
+    </div>
+</body>
+<script src="./lib/bootstrap.bundle.min.js"></script>
+</html>
